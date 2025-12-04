@@ -1,3 +1,5 @@
+// [ PROJETO INTEGRADOR - SENAI ]
+
 // ----------------- Motores (L298N) ---------------------------
 #define IN1 5
 #define IN2 6
@@ -36,9 +38,7 @@ int ultimaDirecaoOponente = 0; // 0=frente, 1=esq, 2=dir
 bool modoAtaque = false;
 unsigned long tempoModoAtaque = 0;
 
-// =============================================================
-// -------------------- MOVIMENTOS -----------------------------
-// =============================================================
+// Funções de Estado e Movimentação
 
 void frente(int velocidade = 0)
 {
@@ -108,9 +108,7 @@ void parar()
     analogWrite(IN4, 0);
 }
 
-// =============================================================
-// ---------------- FUNÇÕES DE SENSORES ------------------------
-// =============================================================
+// Funções de Medição
 
 long medirDist(int trig, int echo)
 {
